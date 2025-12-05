@@ -91,7 +91,7 @@ docker-compose up --build
 
 ```bash
 # If running locally with python installed
-python3 -m unittest backend/EmotionDetection/test_emotion_detection.py
+python3 -m unittest backend/tests/test_emotion_detection.py
 
 # OR via Docker (if configured)
 docker exec -it <container_id> python3 -m unittest discover
