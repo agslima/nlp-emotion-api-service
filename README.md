@@ -1,10 +1,11 @@
 # AI Emotion Detector Web App
 
+![Build Status](https://github.com/agslima/devops-project/actions/workflows/ci-cd.yml/badge.svg)
 [![Python 3.10](https://img.shields.io/badge/Python-3.10-blue.svg)](https://python.org)
 [![Flask](https://img.shields.io/badge/Backend-Flask-lightgrey.svg)](https://flask.palletsprojects.com/)
 [![Docker](https://img.shields.io/badge/Deployment-Docker-blue.svg)](https://docker.com)
 [![IBM Watson](https://img.shields.io/badge/AI-IBM%20Watson-052FAD.svg)](https://www.ibm.com/watson)
-[![License](https://img.shields.io/badge/Apache-2.0.svg)]()
+[![License](https://img.shields.io/badge/License-Apache%202.0-lightgrey.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## Introduction
 
