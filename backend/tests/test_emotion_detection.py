@@ -7,6 +7,8 @@ text inputs.
 """
 
 import unittest
+import json # Mock test
+from unittest.mock import patch # Mock test
 from EmotionDetection.emotion_detection import emotion_detector
 
 class TestEmotionDetection(unittest.TestCase):
