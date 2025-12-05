@@ -23,8 +23,6 @@ Such emotion-aware systems are critical for:
 * **Market Research:** Analyzing product reviews for specific pain points.
 * **Mental Health:** Early detection of distress signals in text.
 
----
-
 ## Technologies & Architecture
 
 | Component | Technology | Description |
@@ -35,7 +33,7 @@ Such emotion-aware systems are critical for:
 | **Container** | **Docker** | Ensures portability and easy deployment. |
 | **Testing** | **Unittest** | Python's built-in framework for logic validation. |
 
----
+
 
 ## Project Structure
 
@@ -57,6 +55,8 @@ final-project-emb-ai/
 └── docker-compose.yml      <- Orchestration Config
 ```
 
+---
+
 ### 🚀 How to Run
 ​
 **Prerequisites**
@@ -73,7 +73,7 @@ cd final-project-emb-ai
 
 **2. Deployment with Docker**
 
-​The easiest way to run the application is using Docker Compose, which builds the image and maps the ports automatically.
+​The easiest way to run the application is to use Docker Compose, which automatically builds the image and maps the ports.
 
 ```bash
 docker-compose up --build
@@ -112,7 +112,7 @@ docker exec -it <container_id> python3 -m unittest discover
 ```
 <br>
 <p align="center">
-  <img src=".files/app_img.png" alt="NPL Response" width="200"/>
+  <img src=".files/app_img.png" alt="NPL Response" width="600"/>
 </p>
 <br>
 
