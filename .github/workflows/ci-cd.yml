@@ -67,4 +67,4 @@ jobs:
           DOCKER_HUB_ACCESS_TOKEN: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
         run: |
           echo "$DOCKER_HUB_ACCESS_TOKEN" | docker login -u "$DOCKER_HUB_USERNAME" --password-stdin
-          docker tag emotion-backend push $DOCKER_HUB_USERNAME/emotion-backend:latest
+          docker push $DOCKER_HUB_USERNAME/emotion-backend:latest
