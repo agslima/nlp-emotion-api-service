@@ -4,7 +4,7 @@
 [![Flask](https://img.shields.io/badge/Backend-Flask-lightgrey.svg)](https://flask.palletsprojects.com/)
 [![Docker](https://img.shields.io/badge/Deployment-Docker-blue.svg)](https://docker.com)
 [![IBM Watson](https://img.shields.io/badge/AI-IBM%20Watson-052FAD.svg)](https://www.ibm.com/watson)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)]()
+[![License](https://img.shields.io/badge/Apache-2.0.svg)]()
 
 ## Introduction
 
