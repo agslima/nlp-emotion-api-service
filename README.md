@@ -1,6 +1,6 @@
 # AI Emotion Detector Web App
 
-![Build Status](https://github.com/agslima/devops-project/actions/workflows/ci-cd.yml/badge.svg)
+![CD/CD Status](https://github.com/agslima/devops-project/actions/workflows/ci-cd.yml/badge.svg)
 [![Python 3.10](https://img.shields.io/badge/Python-3.10-blue.svg)](https://python.org)
 [![Flask](https://img.shields.io/badge/Backend-Flask-lightgrey.svg)](https://flask.palletsprojects.com/)
 [![Docker](https://img.shields.io/badge/Deployment-Docker-blue.svg)](https://docker.com)
