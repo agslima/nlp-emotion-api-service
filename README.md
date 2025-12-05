@@ -84,6 +84,8 @@ docker-compose up --build
 ​Once the container is running, open your browser:
 👉 http://localhost:5000
 
+---
+
 ### ​🧪 Testing
 ​Unit tests are included to ensure the reliability of the emotion detection logic. To run tests inside the container (or locally):
 
@@ -94,6 +96,8 @@ python3 -m unittest backend/EmotionDetection/test_emotion_detection.py
 # OR via Docker (if configured)
 docker exec -it <container_id> python3 -m unittest discover
 ```
+
+---
 
 ### 📊 Example Output
 
@@ -122,6 +126,8 @@ docker exec -it <container_id> python3 -m unittest discover
 
 ![GIF placeholder](https://via.placeholder.com/800x400?text=App+Interaction+GIF)
 -->
+
+---
 
 ### ⚖️ License
 
