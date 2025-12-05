@@ -1,0 +1,18 @@
+# Pin dependancies that might cause breakage
+
+# Build dependencies
+Flask==2.2.5
+
+# Runtime dependencies
+
+# Code quality
+pylint==2.14.0
+flake8==4.0.1
+black==24.3.0
+
+# Testing dependencies
+
+# Code Coverage
+coverage==6.3.2
+
+# Utilities

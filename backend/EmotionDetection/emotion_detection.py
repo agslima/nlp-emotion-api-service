@@ -9,6 +9,7 @@ and the dominant emotion for a given text input.
 from typing import Dict
 import requests
 
+
 def emotion_detector(text_to_analyze: str) -> Dict[str, float or None]:
     """
     Detects emotions from a given text using IBM Watson NLP Emotion API.
@@ -24,12 +25,12 @@ def emotion_detector(text_to_analyze: str) -> Dict[str, float or None]:
     # Return None values for blank input
     if not text_to_analyze.strip():
         return {
-            'anger': None,
-            'disgust': None,
-            'fear': None,
-            'joy': None,
-            'sadness': None,
-            'dominant_emotion': None
+            "anger": None,
+            "disgust": None,
+            "fear": None,
+            "joy": None,
+            "sadness": None,
+            "dominant_emotion": None,
         }
 
     url = (
@@ -37,9 +38,7 @@ def emotion_detector(text_to_analyze: str) -> Dict[str, float or None]:
         "v1/watson.runtime.nlp.v1/NlpService/EmotionPredict"
     )
 
-    headers = {
-        "grpc-metadata-mm-model-id": "emotion_aggregated-workflow_lang_en_stock"
-    }
+    headers = {"grpc-metadata-mm-model-id": "emotion_aggregated-workflow_lang_en_stock"}
 
     payload = {"raw_document": {"text": text_to_analyze}}
 
@@ -48,29 +47,55 @@ def emotion_detector(text_to_analyze: str) -> Dict[str, float or None]:
 
         # Return None values for bad request
         if response.status_code == 400:
-            return {k: None for k in ['anger','disgust','fear','joy','sadness','dominant_emotion']}
+            return {
+                k: None
+                for k in [
+                    "anger",
+                    "disgust",
+                    "fear",
+                    "joy",
+                    "sadness",
+                    "dominant_emotion",
+                ]
+            }
 
         response_dict = response.json()
 
         # Check if 'emotionPredictions' exists and is not empty
-        if "emotionPredictions" not in response_dict or not response_dict["emotionPredictions"]:
-            return {k: None for k in ['anger','disgust','fear','joy','sadness','dominant_emotion']}
+        if (
+            "emotionPredictions" not in response_dict
+            or not response_dict["emotionPredictions"]
+        ):
+            return {
+                k: None
+                for k in [
+                    "anger",
+                    "disgust",
+                    "fear",
+                    "joy",
+                    "sadness",
+                    "dominant_emotion",
+                ]
+            }
 
         emotions = response_dict["emotionPredictions"][0]["emotion"]
 
         dominant_emotion = max(emotions, key=emotions.get)
 
         result = {
-            'anger': emotions.get('anger', 0),
-            'disgust': emotions.get('disgust', 0),
-            'fear': emotions.get('fear', 0),
-            'joy': emotions.get('joy', 0),
-            'sadness': emotions.get('sadness', 0),
-            'dominant_emotion': dominant_emotion
+            "anger": emotions.get("anger", 0),
+            "disgust": emotions.get("disgust", 0),
+            "fear": emotions.get("fear", 0),
+            "joy": emotions.get("joy", 0),
+            "sadness": emotions.get("sadness", 0),
+            "dominant_emotion": dominant_emotion,
         }
 
         return result
 
     except (requests.RequestException, ValueError, KeyError):
         # Return None values if network/API error occurs or JSON is invalid
-        return {k: None for k in ['anger','disgust','fear','joy','sadness','dominant_emotion']}
+        return {
+            k: None
+            for k in ["anger", "disgust", "fear", "joy", "sadness", "dominant_emotion"]
+        }
