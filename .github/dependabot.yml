@@ -19,6 +19,14 @@ updates:
       - "backend"
       - "python"
 
+  # 2.1 Looks for requirements.txt
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "python"
+
   # 3. Backend Docker Base Image
   # Looks for Dockerfile in the backend folder to update the Python image
   - package-ecosystem: "docker"
@@ -38,3 +46,4 @@ updates:
     labels:
       - "frontend"
       - "docker"
+
