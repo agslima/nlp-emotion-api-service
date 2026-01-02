@@ -13,6 +13,6 @@ black==24.3.0
 # Testing dependencies
 
 # Code Coverage
-coverage==6.3.2
+coverage==7.13.1
 
 # Utilities
