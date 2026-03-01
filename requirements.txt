@@ -6,7 +6,7 @@ Flask==3.1.2
 # Runtime dependencies
 
 # Code quality
-pylint==4.0.4
+pylint==4.0.5
 black==26.1.0
 
 # Testing dependencies
